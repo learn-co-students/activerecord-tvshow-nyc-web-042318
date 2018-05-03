@@ -1,6 +1,9 @@
 require "bundler/setup"
 require 'yaml'
 require 'active_record'
+# require_relative '../app/show'
+# require_relative '../db/migrate/01_create_shows_table.rb'
+require 'pry'
 
 Bundler.require
 
@@ -19,3 +22,6 @@ DB = ActiveRecord::Base.establish_connection(connection_details)
 if ENV["ACTIVE_RECORD_ENV"] == "test"
   ActiveRecord::Migration.verbose = false
 end
+
+ #binding.pry
+# true
